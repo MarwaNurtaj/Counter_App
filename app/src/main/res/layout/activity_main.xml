@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E1E1">
+
+    <TextView
+        android:id="@+id/AppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Counter"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#696969"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AppName" />
+
+    <TextView
+        android:id="@+id/freespc"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/counting"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AppName" />
+
+    <TextView
+        android:id="@+id/counting"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textAlignment="center"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@color/white"
+        android:text="2019160255"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/btnreset"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/freespc" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:backgroundTint="#FFC107"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnreset"
+        app:layout_constraintTop_toBottomOf="@id/counting" />
+
+    <Button
+        android:id="@+id/btnreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:backgroundTint="#FFC107"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toRightOf="@id/btnStart"
+        app:layout_constraintRight_toLeftOf="@id/btnPause"
+        app:layout_constraintTop_toBottomOf="@id/counting" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:backgroundTint="#FFC107"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/freespc1"
+        app:layout_constraintLeft_toRightOf="@id/btnreset"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/counting" />
+
+    <TextView
+        android:id="@+id/freespc1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/nameID"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnreset" />
+
+    <TextView
+        android:id="@+id/nameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marwa Khanom Nurtaj \n 2019-1-60-255"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@id/btnreset"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnexit"/>
+
+
+    <TextView
+        android:id="@+id/freespc2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/btnexit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameID" />
+
+    <Button
+        android:id="@+id/btnexit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E4E1E1"
+        android:text="Exit"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
